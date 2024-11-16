@@ -32,3 +32,6 @@ function simulateFraudDetection() {
   const result = Math.random() > 0.5 ? 'No fraud detected' : 'Fraudulent activity detected!';
   document.getElementById('fraud-result').innerText = result;
 }
+
+
+

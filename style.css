@@ -7,7 +7,7 @@ body {
   
   header {
     background-color: #76aac2;
-    color: white;
+    color: rgb(29, 7, 7);
     padding: 1em 0;
     text-align: center;
   }
@@ -27,7 +27,7 @@ body {
   }
   
   nav ul li a {
-    color: white;
+    color: rgb(29, 7, 7);
     text-decoration: none;
   }
   
