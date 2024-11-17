@@ -26,10 +26,28 @@
         <div id="dashboard" style="display: none;">
             <h2>Dashboard</h2>
             <p id="welcome-message"></p>
-            <button onclick="addUser()">Add User</button>
-            <button onclick="deposit()">Deposit Money</button>
-            <button onclick="withdraw()">Withdraw Money</button>
 
+            <section id = "addUser">
+                <h2>Add User</h2>
+                <p>Add a new user to the account</p>
+                <button onclick="addUser()">Add User</button>
+                <p id = "addUser-status"></p>
+            </section>
+
+            <section id = "depositFunds">
+                <h2>Deposit</h2>
+                <p>Deposit amount to another account</p>
+                <button onclick="deposit()">Deposit Money</button>
+                <p id = "deposit-status"></p>
+            </section>
+            
+            <section id = "withdrawFunds">
+                <h2>Withdraw</h2>
+                <p>Withdraw amount</p>
+                <button onclick="withdraw()">Withdraw Money</button>
+                <p id = "withdraw-status"></p>
+            </section>
+            
             <section id = "transferFunds">
                 <h2> Tranfer Funds</h2>
                 <p>Transfer amount to another existing account</p>
