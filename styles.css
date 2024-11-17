@@ -13,6 +13,9 @@ body {
 h1 {
     color: #f7f4f4;
 }
+h2{
+    color: #f7f4f4;
+}
 
 form {
     margin: auto;
@@ -42,3 +45,5 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+

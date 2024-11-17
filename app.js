@@ -1,4 +1,3 @@
-// Simulated database
 const users = [
     { username: 'admin', password: 'admin', balance: 1000 }
 ];
@@ -16,7 +15,9 @@ function login(event) {
         localStorage.setItem('currentUser', username);
         document.getElementById('login-section').style.display = 'none';
         document.getElementById('dashboard').style.display = 'block';
-        document.getElementById('welcome-message').innerText = `Welcome, ${username}!`;
+        document.getElementById('welcome-message').innerText = 
+        `Welcome, ${username}! 
+        Your Balance is \$${user.balance}`;
     } else {
         document.getElementById('login-error').innerText = 'Invalid credentials.';
     }
@@ -29,12 +30,17 @@ function logout() {
 }
 
 function addUser() {
+    
     const username = prompt('Enter new username:');
     const password = prompt('Enter password:');
+    
     if (username && password) {
+
         users.push({ username, password, balance: 0 });
         alert('User added successfully.');
     }
+    
+
 }
 
 function deposit() {
@@ -45,6 +51,9 @@ function deposit() {
         user.balance += amount;
         transactions.push({ username, type: 'deposit', amount });
         alert(`Deposited $${amount}. New Balance: $${user.balance}`);
+        document.getElementById('welcome-message').innerText = 
+        `Welcome, ${username}! 
+        Your Balance is \$${user.balance}`;
     } else {
         alert('Invalid amount.');
     }
@@ -59,6 +68,9 @@ function withdraw() {
             user.balance -= amount;
             transactions.push({ username, type: 'withdraw', amount });
             alert(`Withdrew $${amount}. New Balance: $${user.balance}`);
+            document.getElementById('welcome-message').innerText = 
+            `Welcome, ${username}! 
+            Your Balance is \$${user.balance}`;
         } else {
             alert('Insufficient funds.');
         }
@@ -94,3 +106,5 @@ function checkFraud() {
 }
 
 document.getElementById('login-form').addEventListener('submit', login);
+
+
