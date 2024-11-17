@@ -1,4 +1,4 @@
-let balance = 1000; // Mock balance
+let balance = 2500; // Mock balance
 
 function checkBalance() {
   document.getElementById('balance-display').innerText = `Your balance is $${balance}`;
@@ -20,7 +20,7 @@ function sendPayment(event) {
 function showInvestmentOpportunities() {
   const opportunities = ['Stock A - High Risk', 'Bond B - Low Risk', 'Real Estate C'];
   const list = document.getElementById('investment-list');
-  list.innerHTML = ''; // Clear previous list
+  list.innerHTML = ''; 
   opportunities.forEach(opportunity => {
     const li = document.createElement('li');
     li.textContent = opportunity;
@@ -28,7 +28,19 @@ function showInvestmentOpportunities() {
   });
 }
 
-function simulateFraudDetection() {
-  const result = Math.random() > 0.5 ? 'No fraud detected' : 'Fraudulent activity detected!';
-  document.getElementById('fraud-result').innerText = result;
+function simulateFraudDetection(transaction) {
+  const maxTransactionAmount = 10000; 
+  const susHours = [0, 1, 2, 3, 4, 23]; 
+
+  const transactionTime = new Date(transaction.timestamp).getHours();
+
+  if (transaction.amount > maxTransactionAmount) {
+    return 'High transaction amount';
+  } 
+  else if (susHours.includes(transactionTime)) {
+    return 'Suspicious transaction time';
+  } 
+  else {
+    return 'No fraud detected';
+  }
 }
