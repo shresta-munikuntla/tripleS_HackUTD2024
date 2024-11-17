@@ -43,7 +43,7 @@ section {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-footer {
+/* footer {
   text-align: center;
   padding: 10px;
   background-color: #333;
@@ -51,4 +51,12 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
+} */
+
+.links {
+  font-size: medium;
+  font-family:'Times New Roman', Times, serif;
+  text-decoration-color: black;
+  text
 }
+
