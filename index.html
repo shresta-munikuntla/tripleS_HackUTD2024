@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial App</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Financial Application</h1>
@@ -29,12 +29,34 @@
             <button onclick="addUser()">Add User</button>
             <button onclick="deposit()">Deposit Money</button>
             <button onclick="withdraw()">Withdraw Money</button>
-            <button onclick="transferFunds()">Transfer Funds</button>
-            <button onclick="checkFraud()">Fraud Detection</button>
-            <button onclick="logout()">Logout</button>
+
+            <section id = "transferFunds">
+                <h2> Tranfer Funds</h2>
+                <p>Transfer amount to another existing account</p>
+                <button onclick="transferFunds()">Transfer Funds</button>
+                <p id = "transfer-status"></p>
+            </section>
+
+            <section id = "fraudCheck">
+                <h2>Fraud Detection</h2>
+                <p>Checking if user's transactions are suspicious</p>
+                <button onclick="checkFraud()">Fraud Detection</button>
+                <p id = "fraud-detection"></p>
+            </section>
+            
+            <section id = "logout">
+                <h2>Logout</h2>
+                <p>Logout of account</p>
+                <button onclick="logout()">Logout</button>
+                <p id = "logout-status"></p>
+            </section>
+            
             <div id="output"></div>
         </div>
     </div>
+    <footer>
+        <p>© 2024 Finance Help</p>
+      </footer>
     <script src="app.js"></script>
 </body>
 </html>
