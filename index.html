@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Financial Application</h1>
@@ -26,28 +26,24 @@
         <div id="dashboard" style="display: none;">
             <h2>Dashboard</h2>
             <p id="welcome-message"></p>
-
             <section id = "addUser">
                 <h2>Add User</h2>
                 <p>Add a new user to the account</p>
                 <button onclick="addUser()">Add User</button>
-                <p id = "addUser-status"></p>
             </section>
 
             <section id = "depositFunds">
-                <h2>Deposit</h2>
-                <p>Deposit amount to another account</p>
+                <h2>Deposit Money</h2>
+                <p>Deposit Money to another account</p>
                 <button onclick="deposit()">Deposit Money</button>
-                <p id = "deposit-status"></p>
             </section>
-            
-            <section id = "withdrawFunds">
-                <h2>Withdraw</h2>
-                <p>Withdraw amount</p>
+
+            <section id = "withdrawMoney">
+                <h2>Withdraw Money</h2>
+                <p>Withdraw money from another user</p>
                 <button onclick="withdraw()">Withdraw Money</button>
-                <p id = "withdraw-status"></p>
             </section>
-            
+
             <section id = "transferFunds">
                 <h2> Tranfer Funds</h2>
                 <p>Transfer amount to another existing account</p>
